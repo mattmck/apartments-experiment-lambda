@@ -1,0 +1,15 @@
+[
+    {
+        "apartmentsId": "c893f68a-617d-4d1a-9d5d-951951d4b02c",
+        "address": "6900 Tasker Falls, Elkridge, MD 21075",
+        "glyph": "building",
+        "name": "Belmont Station Apartments",
+        "website": "https://www.apartments.com/belmont-station-apartments-elkridge-md/fm0z8mv/"
+    }, {
+        "apartmentsId": "4602e8fe-0df2-4ba5-beb5-5e62d4b4ee03",
+        "address": "3182 Normandy Woods Dr, Ellicott City, MD 21043",
+        "glyph": "building",
+        "name": "Renaissance Hills at Ellicott City",
+        "website": "https://www.apartments.com/renaissance-hills-at-ellicott-city-ellicott-city-md/v1vhw9e/"
+    }
+]

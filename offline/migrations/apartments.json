@@ -1,0 +1,21 @@
+{
+    "Table": {
+        "TableName": "apartments-table-${sls:stage}",
+        "KeySchema": [
+            {
+                "AttributeName": "apartmentsID",
+                "KeyType": "HASH"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "apartmentsId",
+                "AttributeType": "S"
+            }
+        ],
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits": 1,
+            "WriteCapacityUnits": 1
+        }
+    }
+}
