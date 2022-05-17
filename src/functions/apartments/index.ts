@@ -1,4 +1,4 @@
-import { handlerPath } from '@libs/handler-resolver';
+import { handlerPath } from '../../libs/handler-resolver'
 
 export const getAllApartments = {
     handler: `${handlerPath(__dirname)}/handler.getAllApartments`,

@@ -6,9 +6,10 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "serverless offline start --migrate --exec \"mocha -r ts-node/register ./src/**/*.spec.ts\"",
+    "start": "serverless offline start"
   },
-  "engines":{
+  "engines": {
     "node": ">=14.15.0"
   },
   "author": {
@@ -27,14 +28,20 @@
   "devDependencies": {
     "@serverless/typescript": "^3.17.0",
     "@types/aws-lambda": "^8.10.97",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.33",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
     "esbuild": "^0.14.39",
     "json-schema-to-ts": "^2.4.0",
     "serverless": "^3.17.0",
     "serverless-dynamodb-local": "^0.2.40",
     "serverless-esbuild": "^1.27.0",
+    "serverless-mocha-plugin": "^1.12.0",
     "serverless-offline": "^8.5.0",
-    "serverless-plugin-typescript": "^2.1.2",
+    "sls": "^0.1.0",
+    "ts-mocha": "^10.0.0",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.6.4"

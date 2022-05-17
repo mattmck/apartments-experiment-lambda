@@ -1,11 +1,11 @@
 import type { AWS } from '@serverless/typescript';
 
-import { getAllApartments, createApartment, updateApartment, getApartment, deleteApartment } from '@functions/apartments'
+import { getAllApartments, createApartment, updateApartment, getApartment, deleteApartment } from './src/functions/apartments'
 
 const serverlessConfiguration: AWS = {
     service: 'apartments-experiment-lambda',
     frameworkVersion: '3',
-    plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dynamodb-local'],
+    plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dynamodb-local', 'serverless-mocha-plugin'],
     provider: {
         name: 'aws',
         runtime: 'nodejs14.x',
@@ -57,8 +57,9 @@ const serverlessConfiguration: AWS = {
                 port: 8000,
                 inMemory: true,
                 migrate: true,
+                seed: true
             },
-            stages: "dev",
+            stages: "test",
             migration: {
                 dir: 'offline/migrations'
             },
@@ -70,6 +71,10 @@ const serverlessConfiguration: AWS = {
                     }
                 }
             }
+        },
+        "serverless-mocha-plugin": {
+            preTestCommands: ["bash startOffline.sh"],
+            postTestCommands: ["bash stopOffline.sh"]
         }
     },
     resources: {

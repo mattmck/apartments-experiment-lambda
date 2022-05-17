@@ -1,7 +1,7 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
-import { formatJSONResponse } from '@libs/api-gateway';
-import { middyfy } from '@libs/lambda';
-import Apartment from '@model/apartment'
+import { formatJSONResponse } from '../../libs/api-gateway';
+import { middyfy } from '../../libs/lambda';
+import Apartment from '../../model/'
 import apartmentsService from '../../services'
 
 import { v4 } from "uuid";

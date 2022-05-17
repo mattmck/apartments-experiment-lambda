@@ -4,7 +4,7 @@ import Apartment from "../model/apartment";
 
 const APARTMENTS_TABLE = process.env.APARTMENTS_TABLE;
 
-export default class TodoServerice {
+export default class ApartmentsService {
 
     constructor(private docClient: DocumentClient) { }
 
