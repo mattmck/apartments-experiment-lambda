@@ -4,10 +4,10 @@
   "description": "Apartments Experiment Lambdas",
   "main": "serverless.ts",
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
-    "test": "serverless offline start --migrate --exec \"mocha -r ts-node/register ./src/**/*.spec.ts\"",
-    "start": "serverless offline start"
+    "clean": "rm -rf .esbuild offline*.log",
+    "lint": "npx eslint . --ext .ts",
+    "test": "npx sls invoke test --stage test",
+    "start": "npx sls offline start --stage test"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -31,16 +31,21 @@
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "axios": "^0.27.2",
     "chai": "^4.3.6",
     "esbuild": "^0.14.39",
+    "eslint": "^8.15.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
     "json-schema-to-ts": "^2.4.0",
-    "serverless": "^3.17.0",
     "serverless-dynamodb-local": "^0.2.40",
     "serverless-esbuild": "^1.27.0",
     "serverless-mocha-plugin": "^1.12.0",
     "serverless-offline": "^8.5.0",
-    "sls": "^0.1.0",
     "ts-mocha": "^10.0.0",
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^4.0.0",

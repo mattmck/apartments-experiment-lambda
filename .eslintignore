@@ -1,0 +1,5 @@
+.build
+.dybnamodb
+.esbuild
+.serverless
+node_modules

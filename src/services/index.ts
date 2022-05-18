@@ -1,6 +1,6 @@
-import dynamoDBClient from "../model";
-import ApartmentsService from "./apartmentsService";
+import dynamoDBClient from '../model'
+import ApartmentsService from './apartmentsService'
 
-const apartmentsService = new ApartmentsService(dynamoDBClient());
+const apartmentsService = new ApartmentsService(dynamoDBClient())
 
-export default apartmentsService;
+export default apartmentsService
