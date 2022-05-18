@@ -107,3 +107,4 @@ dist
 lib/
 /.build/
 /.esbuild/
+offline*.log
